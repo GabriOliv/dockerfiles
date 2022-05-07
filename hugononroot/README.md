@@ -3,11 +3,12 @@
 ---
 
 Run HUGO Framework inside container as executable
+
 Set a non-Root user to run commands with [this code](https://code.visualstudio.com/remote/advancedcontainers/add-nonroot-user)
 
 ---
 
-### Build Image from Dockerfile
+### Build Image from Dockerfile Folder
 - `sudo docker build --no-cache FOLDER_NAME -t IMAGE_NAME`
 	```sh
 	docker build --no-cache hugononroot -t hugononroot
