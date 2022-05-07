@@ -10,7 +10,7 @@ Set a non-Root user to run commands with [this code](https://code.visualstudio.c
 
 ### Build Image from Dockerfile Folder
 - `sudo docker build --no-cache FOLDER_NAME -t IMAGE_NAME`
-	```sh
+	```shell
 	docker build --no-cache hugononroot -t hugononroot
 	```
 
@@ -18,7 +18,7 @@ Set a non-Root user to run commands with [this code](https://code.visualstudio.c
 
 ### Run
 - Create new Site
-	```bash
+	```shell
 	docker run \
 		--rm -it \
 		-v $(pwd):/app \
@@ -26,7 +26,7 @@ Set a non-Root user to run commands with [this code](https://code.visualstudio.c
 		new site SITE_NAME
 	```
 - Create new Post with Template
-	```bash
+	```shell
 	docker run \
 		--rm -it \
 		-v $(pwd):/app \
@@ -34,7 +34,7 @@ Set a non-Root user to run commands with [this code](https://code.visualstudio.c
 		new -k post posts/NEWPOST.md
 	```
 - Run Hugo Server (Default Host)
-	```bash
+	```shell
 	docker run \
 		--rm -it \
 		-v $(pwd):/app \
@@ -43,7 +43,7 @@ Set a non-Root user to run commands with [this code](https://code.visualstudio.c
 		server -D
 	```
 - Run Hugo Server (Port Parameter)
-	```bash
+	```shell
 	docker run \
 		--rm -it \
 		-v $(pwd):/app \
