@@ -1,6 +1,6 @@
 # Dockerfile Python HTTP Server
 
-Run Python Module "http.server" inside a container as an executable.
+Dockerfile to run Python Module "http.server" inside a container as an executable.
 
 ---
 
