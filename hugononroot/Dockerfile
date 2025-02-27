@@ -1,3 +1,5 @@
+# Dockerfile for Hugo Framework
+
 FROM ubuntu:20.04
 
 ENV DEBIAN_FRONTEND noninteractive
@@ -25,3 +27,5 @@ WORKDIR /app
 USER $USERNAME
 
 ENTRYPOINT [ "hugo" ]
+
+CMD [ "version" ]

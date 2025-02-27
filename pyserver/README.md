@@ -1,34 +1,30 @@
-# Python HTTP Server
+# Dockerfile Python HTTP Server
+
+Run Python Module "http.server" inside a container as an executable.
 
 ---
 
-Run Python http server inside container as executable
+## Build
 
----
-
-### Build
-- `sudo docker build FOLDER_NAME -t IMAGE_NAME`
-	```shell
-	docker build --no-cache pyserver -t pyserver
-	```
-
-### Run
-
-```shell
-docker run \
-	-d \
-	--network host \
-	-v $(pwd):/app \
-	pyserver
+```bash
+docker build --no-cache -t pyserver .
 ```
-- Run on [Detached Mode](https://docs.docker.com/engine/reference/run/#detached--d)
 
-### Access
-- `http://localhost:8000/`
+## Run
 
+```bash
+docker run -d --network host -v $(pwd):/app pyserver
+```
 
-### Stop and Remove Containers of "pyserver" Image
-```shell
+## Access
+
+```url
+http://localhost:8000/
+```
+
+## Stop and Remove Containers
+
+```bash
 docker rm $(docker stop -t3 $(docker ps -aq --filter ancestor=pyserver))
 ```
 
